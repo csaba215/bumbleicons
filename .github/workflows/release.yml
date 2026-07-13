@@ -32,4 +32,4 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx --yes semantic-release
+        run: npx --yes -p semantic-release -p @semantic-release/changelog -p @semantic-release/git semantic-release
