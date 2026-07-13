@@ -5,8 +5,15 @@ const webfontsGenerator = require("webfonts-generator");
 const root = path.resolve(__dirname, "..");
 const rawSvgDir = path.join(root, "raw-svg");
 const fontsDir = path.join(root, "fonts");
-const selectionPath = path.join(root, "selection.json");
+const cssPath = path.join(root, "bumblevueicons.css");
 const fontName = "bumblevueicons";
+const aliases = new Map([
+  ["asteriks", "asterisk"],
+  ["sort-alpha-alt-down", "sort-alpha-down-alt"],
+  ["sort-alpha-alt-up", "sort-alpha-up-alt"],
+  ["sort-numeric-alt-down", "sort-numeric-down-alt"],
+  ["sort-numeric-alt-up", "sort-numeric-up-alt"]
+]);
 
 const fontTypes = ["eot", "woff2", "woff", "ttf", "svg"];
 const svgFiles = fs
@@ -15,15 +22,16 @@ const svgFiles = fs
   .sort((a, b) => a.localeCompare(b))
   .map((file) => path.join(rawSvgDir, file));
 
-const selection = JSON.parse(fs.readFileSync(selectionPath, "utf8"));
+const css = fs.readFileSync(cssPath, "utf8");
 const codepoints = Object.create(null);
 
-for (const item of selection.icons || []) {
-  const name = item.properties && item.properties.name;
-  const code = item.properties && item.properties.code;
+for (const [, name, code] of css.matchAll(/\.pi-([a-z0-9-]+):before\s*\{\s*content:\s*"\\([a-f0-9]+)";\s*\}/g)) {
+  codepoints[name] = Number.parseInt(code, 16);
+}
 
-  if (name && Number.isInteger(code)) {
-    codepoints[name] = code;
+for (const [rawName, cssName] of aliases) {
+  if (Number.isInteger(codepoints[cssName])) {
+    codepoints[rawName] = codepoints[cssName];
   }
 }
 
