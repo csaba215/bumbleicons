@@ -49,4 +49,6 @@ if (extra.length > 0) {
   for (const name of extra) {
     console.log(`- .pi-${name}:before`);
   }
+
+  process.exit(1);
 }
