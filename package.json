@@ -1,16 +1,21 @@
 {
-  "name": "primeicons",
-  "version": "7.0.1-SNAPSHOT",
-  "description": "Icon Library for Prime UI Libraries",
+  "name": "@csaba215/bumbleicons",
+  "version": "1.0.0-beta.1",
+  "description": "Icon Library for BumbleVue UI Library",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/primefaces/primeicons.git"
+    "url": "git+https://github.com/csaba215/bumbleicons.git"
   },
   "keywords": ["Icon"],
-  "author": "PrimeTek",
+  "author": "BumbleVue",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/primefaces/primeicons/issues"
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public",
+    "provenance": true
   },
-  "homepage": "https://github.com/primefaces/primeicons#readme"
+  "bugs": {
+    "url": "https://github.com/csaba215/bumbleicons/issues"
+  },
+  "homepage": "https://github.com/csaba215/bumbleicons#readme"
 }
