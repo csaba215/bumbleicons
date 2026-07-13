@@ -29,6 +29,18 @@ jobs:
       - name: Show npm version
         run: npm --version
 
+      - name: Install generator dependencies
+        run: npm ci
+
+      - name: Regenerate font files
+        run: npm run generate:fonts
+
+      - name: Regenerate README icons
+        run: npm run generate:readme-icons
+
+      - name: Verify generated files are committed
+        run: git diff --exit-code -- README.md fonts
+
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

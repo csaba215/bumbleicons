@@ -2,6 +2,12 @@
   "name": "@csaba215/bumbleicons",
   "version": "1.0.0-beta.1",
   "description": "Icon Library for BumbleVue UI Library",
+  "scripts": {
+    "generate:fonts": "node scripts/generate-fonts.cjs",
+    "generate:demo": "node scripts/generate-demo.mjs",
+    "generate:readme-icons": "node scripts/generate-readme-icons.mjs",
+    "validate:icons-css": "node scripts/validate-icons-css.mjs"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/csaba215/bumbleicons.git"
@@ -17,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/csaba215/bumbleicons/issues"
   },
-  "homepage": "https://github.com/csaba215/bumbleicons#readme"
+  "homepage": "https://github.com/csaba215/bumbleicons#readme",
+  "devDependencies": {
+    "webfonts-generator": "^0.4.0"
+  }
 }
