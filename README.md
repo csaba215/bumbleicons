@@ -1,27 +1,10 @@
-# PrimeIcons
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![npm version](https://badge.fury.io/js/%40csaba215%2Fbumbleicons.svg)](https://badge.fury.io/js/%40csaba215%2Fbumbleicons)
+[![npm downloads](https://img.shields.io/npm/dm/%40csaba215%2Fbumbleicons.svg)](https://www.npmjs.com/package/@csaba215/bumbleicons)
+---
 
-### The next chapter has begun.
+Font Icon Library for [BumbleVue](https://github.com/csaba215/bumblevue)
 
-After years as an open source library, PrimeIcons enters its next chapter as part of **PrimeUI**,  a sustainable foundation for the libraries you rely on.
+---
 
-This repository is now **archived**. It remains available, as a record of everything built here together.
-
-## What this means
-
-**Existing MIT versions remain MIT, forever.**
-Every release published under the MIT license stays exactly as it is. Your existing projects are unaffected. Nothing is taken away.
-
-**Development continues at a new home.**
-Active development, new releases, and everything ahead now live under PrimeUI.
-
-➡️ **Read the announcement:** [primeui.dev/nextchapter](https://primeui.dev/nextchapter)
-
-➡️ **The journey continues at:** [primeicons.dev](https://primeicons.dev)
-
-## Thank you
-
-To everyone who used PrimeIcons, filed an issue, opened a pull request, answered a question, or simply built something with it,  thank you. This library reached hundreds of millions of downloads because of you.
-
-This archive stays here as a thank you and a milestone. The next chapter is just beginning, and we hope you'll be part of it.
-
-— The PrimeTek Team
+![Icons Preview](https://www.primefaces.org/wp-content/uploads/2022/09/primeicons-6-0-list.png "BumbleIcons")
