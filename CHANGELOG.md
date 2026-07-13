@@ -1,3 +1,15 @@
+# [1.4.0](https://github.com/csaba215/bumbleicons/compare/v1.3.0...v1.4.0) (2026-07-13)
+
+
+### Bug Fixes
+
+* **release:** commit back package.json and package-lock.json ([c7ffdf7](https://github.com/csaba215/bumbleicons/commit/c7ffdf7064e7a79c36f0dec777af5282d026e4bc))
+
+
+### Features
+
+* update validation script ([899b636](https://github.com/csaba215/bumbleicons/commit/899b6367e291e9a0c6b4b8976a0c597bf2afbcf8))
+
 # [1.3.0](https://github.com/csaba215/bumbleicons/compare/v1.2.0...v1.3.0) (2026-07-13)
 
 
