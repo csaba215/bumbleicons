@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/csaba215/bumbleicons/compare/v1.4.0...v1.5.0) (2026-07-13)
+
+
+### Features
+
+* **release:** update .npmignore, remove selection.js, update generate-fonts.cjs ([6afeb9d](https://github.com/csaba215/bumbleicons/commit/6afeb9d1a95da3a4bf4961530a2c64536abb808c))
+
 # [1.4.0](https://github.com/csaba215/bumbleicons/compare/v1.3.0...v1.4.0) (2026-07-13)
 
 

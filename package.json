@@ -1,6 +1,6 @@
 {
   "name": "@csaba215/bumbleicons",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Icon Library for BumbleVue UI Library",
   "scripts": {
     "generate:fonts": "node scripts/generate-fonts.cjs",
