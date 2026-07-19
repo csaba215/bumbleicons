@@ -1,0 +1,59 @@
+name: Release
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    name: Semantic Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      id-token: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Show npm version
+        run: npm --version
+
+      - name: Install generator dependencies
+        run: npm ci
+
+      - name: Regenerate font files
+        run: npm run generate:fonts
+
+      - name: Regenerate README icons
+        run: npm run generate:readme-icons
+
+      - name: Regenerate demo
+        run: npm run generate:demo
+
+      - name: Commit generated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md demo.html fonts
+          if git diff --cached --quiet; then
+            echo "No generated file changes to commit."
+          else
+            git commit -m "chore(release): update generated assets [skip ci]"
+            git push
+          fi
+
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx --yes -p semantic-release -p @semantic-release/changelog -p @semantic-release/git semantic-release

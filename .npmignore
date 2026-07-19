@@ -1,4 +1,8 @@
 .DS_Store
 demo-files
 demo.html
-selection.json
+release.config.cjs
+package-lock.json
+scripts/
+raw-svg/
+.github/

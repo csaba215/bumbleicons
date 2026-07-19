@@ -1,16 +1,25 @@
 {
-  "name": "primeicons",
-  "version": "7.0.1-SNAPSHOT",
-  "description": "Icon Library for Prime UI Libraries",
+  "name": "phasevueicons",
+  "version": "0.0.1-alpha.1",
+  "description": "Icon Library for PhaseVue UI Library",
+  "scripts": {
+    "generate:fonts": "node scripts/generate-fonts.cjs",
+    "generate:demo": "node scripts/generate-demo.mjs",
+    "generate:readme-icons": "node scripts/generate-readme-icons.mjs",
+    "validate:icons-css": "node scripts/validate-icons-css.mjs"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/primefaces/primeicons.git"
+    "url": "git+https://github.com/PhaseVueUI/phasevueicons.git"
   },
   "keywords": ["Icon"],
-  "author": "PrimeTek",
+  "author": "PhaseVueUI",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/primefaces/primeicons/issues"
+    "url": "https://github.com/PhaseVueUI/phasevueicons/issues"
   },
-  "homepage": "https://github.com/primefaces/primeicons#readme"
+  "homepage": "https://github.com/PhaseVueUI/phasevueicons#readme",
+  "devDependencies": {
+    "webfonts-generator": "^0.4.0"
+  }
 }
